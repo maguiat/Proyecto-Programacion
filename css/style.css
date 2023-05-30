@@ -22,8 +22,12 @@ body {
   margin: auto;
 }
 
-.header {
-  padding: 30px 0;
+header{
+  padding: 5px 0;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background-color: var(--fondo);
 }
 
 header .contenedor {
@@ -31,6 +35,9 @@ header .contenedor {
   justify-content: space-between;
   align-items: center;
   padding: 5px 0;
+  position: sticky;
+  top: 0;
+  z-index: 100;
 }
 
 header .titulo-buscador {
@@ -89,10 +96,9 @@ header .logotipo:hover::after {
 header .buscador {
   margin-left: 20px;
   overflow: hidden;
-  transition: width 0.3s ease-in-out;
   border-radius: 20px;
   background-color: transparent;
-  width: 60px;
+  width: 200px;
 }
 
 header .buscador input {
@@ -103,17 +109,11 @@ header .buscador input {
   color: #aaa;
   border-radius: 20px;
   background-color: var(--tercercolor);
-  transition: padding 0.3s ease-in-out;
 }
 
 header .buscador input:focus {
   width: 200px;
   padding: 5px 10px;
-}
-
-header .buscador:hover,
-header .buscador:focus-within {
-  width: 200px;
 }
 
 header .buscador:hover input,
@@ -305,6 +305,38 @@ header nav a.activo::after {
 
 .subtitulos h2 {
   border-bottom: 1px solid var(--segundocolor);
+}
+
+/*------Flechas Carrusel-------*/
+
+.carrusel {
+  position: relative; 
+}
+
+.flecha-izquierda, .flecha-derecha {
+  display: inline-block;
+  position: absolute;
+	border: none;
+	background: rgba(0,0,0,0.3);
+	font-size: 24px;
+	color: #fff;
+	cursor: pointer;
+	z-index: 500;
+  top: 50%;
+  transform: translateY(-50%);
+	transition: .2s ease all;
+}
+
+.flecha-izquierda:hover, .flecha-derecha:hover {
+	background: rgba(0,0,0, .9);
+}
+
+.flecha-izquierda {
+	left: 0;
+}
+
+.flecha-derecha {
+	right: 0;
 }
 
 /*--------Estilos para los carrusel-------*/
