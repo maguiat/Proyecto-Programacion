@@ -121,6 +121,8 @@ header .buscador:focus-within input {
   padding: 5px 10px;
 }
 
+/*--------Menú de navegación-----------*/
+
 header nav a {
   position: relative;
   color: #aaa;
@@ -151,6 +153,51 @@ header nav a:hover::after,
 header nav a.activo::after {
   transform: scaleX(1);
 }
+
+/*------------Menú desplegable---------- */
+.Menu {
+  position: relative;
+  z-index: 1000;
+}
+
+.Menu ul{
+  display: inline-flex;
+}
+
+.Menu ul li {
+  display: flex;
+  position: relative;
+}
+
+.Menu ul li a {
+  display: block;
+  padding: 10px;
+}
+
+.Menu ul li:hover > ul.dropdown-menu {
+  display: flex;
+  top: 100%; 
+}
+
+.Menu ul ul.dropdown-menu {
+  display: none;
+  position: absolute;
+  background: var(--tercercolor);
+  flex-direction: column;
+}
+
+.Menu ul ul.dropdown-menu li {
+  display: flex;
+}
+
+.Menu ul ul.dropdown-menu li a {
+  padding: 10px;
+}
+
+.Menu ul ul.dropdown-menu li a:hover {
+  background: var(--fondo);
+}
+
 
 /* ------- Estilos para el banner de películas (slides) --------- */
 
@@ -225,7 +272,7 @@ header nav a.activo::after {
   position: absolute;
   top: 20%; 
   bottom: 10%; 
-  left: 10px; 
+  left: 5%; 
   color: white; 
   
 }
@@ -312,6 +359,7 @@ header nav a.activo::after {
   color: #fff;
   font-size: 1.5em;
 }
+
 
 
 
