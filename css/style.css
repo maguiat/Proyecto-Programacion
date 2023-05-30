@@ -1,0 +1,327 @@
+:root {
+  --primercolor: #ff1e56;
+  --segundocolor: #ffac41;
+  --tercercolor: #323232;
+  --fondo: #000000;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Cairo";
+}
+
+body {
+  background: var(--fondo);
+  font-family: "Open Sans", sans-serif;
+}
+
+.contenedor {
+  width: 90%;
+  margin: auto;
+}
+
+.header {
+  padding: 30px 0;
+}
+
+header .contenedor {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5px 0;
+}
+
+header .titulo-buscador {
+  display: flex;
+  align-items: center;
+}
+
+header .logotipo {
+  font-family: "Bebas Neue", sans-serif;
+  font-weight: normal;
+  color: var(--primercolor);
+  font-size: 40px;
+  position: relative;
+}
+
+header .logotipo a {
+  text-decoration: none;
+  color: inherit;
+}
+
+header .logotipo::before,
+header .logotipo::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 2px;
+  background-color: var(--primercolor);
+  transition: width 0.3s ease-in-out;
+  opacity: 0;
+}
+
+header .logotipo::before {
+  top: 0;
+  left: 0;
+  transform-origin: top left;
+}
+
+header .logotipo::after {
+  bottom: 0;
+  right: 0;
+  transform-origin: bottom right;
+}
+
+header .logotipo:hover::before,
+header .logotipo:hover::after {
+  width: 100%;
+  opacity: 1;
+}
+
+/*--------Buscador---------*/
+
+header .buscador {
+  margin-left: 20px;
+  overflow: hidden;
+  transition: width 0.3s ease-in-out;
+  border-radius: 20px;
+  background-color: transparent;
+  width: 60px;
+}
+
+header .buscador input {
+  width: 100%;
+  padding: 5px;
+  border: none;
+  outline: none;
+  color: #aaa;
+  border-radius: 20px;
+  background-color: var(--tercercolor);
+  transition: padding 0.3s ease-in-out;
+}
+
+header .buscador input:focus {
+  width: 200px;
+  padding: 5px 10px;
+}
+
+header .buscador:hover,
+header .buscador:focus-within {
+  width: 200px;
+}
+
+header .buscador:hover input,
+header .buscador:focus-within input {
+  padding: 5px 10px;
+}
+
+header nav a {
+  position: relative;
+  color: #aaa;
+  text-decoration: none;
+  margin-right: 20px;
+  transition: color 0.3s ease-in-out;
+}
+
+header nav a:hover,
+header nav a.activo {
+  color: var(--primercolor);
+  transition: color 0.3s ease-in-out;
+}
+
+header nav a::after {
+  content: "";
+  position: absolute;
+  bottom: -3px;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: var(--primercolor);
+  transform: scaleX(0);
+  transition: transform 0.3s ease-in-out;
+}
+
+header nav a:hover::after,
+header nav a.activo::after {
+  transform: scaleX(1);
+}
+
+/* ------- Estilos para el banner de películas (slides) --------- */
+
+.slider {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+}
+
+.slider ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  animation: slide 15s infinite linear;
+  width: 400%;
+}
+
+.slider li {
+  width: 100%;
+}
+
+.slider img {
+  width: 100%;
+  height: 100%;
+}
+
+.slider h3 {
+  font-size: 3em;
+}
+
+.slider h4 {
+  font-size: 1.5em;
+}
+
+.slider p {
+  font-size: 1em;
+}
+
+.image-container {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+  max-width: 100%;
+  height: 500px;
+}
+
+.image-container img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/*-------Estilos para la capa sobre las imagenes del banner-----------*/
+.image-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    to top,
+    rgba(0, 0, 0, 1),
+    transparent
+  ); /* Degradado de oscurecimiento */
+}
+
+/*---------Estilos para el texto en la imagen del banner-------------*/
+.image-text {
+  width: 70%;
+  position: absolute;
+  top: 20%; 
+  bottom: 10%; 
+  left: 10px; 
+  color: white; 
+  
+}
+
+.trailer-button {
+  padding: 10px 20px;
+  margin-top: 20px;
+  background-color: var(--segundocolor);
+  border: none;
+  font-size: 1em;
+  font-weight: bold;
+
+}
+
+.trailer-button a{
+  color: black;
+  text-decoration: none;
+}
+.trailer-button:hover {
+  background-color: var(--primercolor);
+}
+
+
+
+.subtitulos {
+  font-size: large;
+  color: white;
+  margin-left: 10px;
+}
+
+.subtitulos h2 {
+  border-bottom: 1px solid var(--segundocolor);
+}
+
+/*--------Estilos para los carrusel-------*/
+.portadas {
+  display: flex;
+  overflow: auto;
+  margin-top: 10px;
+  margin-bottom: 30px;
+}
+
+.portadas img {
+  width: 100%;
+  object-fit: cover;
+  width: 150px;
+  margin-right: 10px;
+  display: block;
+}
+
+
+@keyframes slide {
+  0% {
+    margin-left: 0;
+  }
+  20% {
+    margin-left: 0;
+  }
+  25% {
+    margin-left: -100%;
+  }
+  45% {
+    margin-left: -100%;
+  }
+  50% {
+    margin-left: -200%;
+  }
+  70% {
+    margin-left: -200%;
+  }
+  75% {
+    margin-left: -300%;
+  }
+  100% {
+    margin-left: -300%;
+  }
+} /* Animación para las slides */
+
+
+
+/* ------- Media Quaries --------- */
+
+@media screen and (max-width: 800px) {
+  header .logotipo {
+    margin-bottom: 10px;
+    font-size: 30px;
+  }
+
+  header .contenedor {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .pelicula-principal {
+    font-size: 14px;
+  }
+
+  .pelicula-principal .descripcion {
+    max-width: 100%;
+  }
+}
+
+
