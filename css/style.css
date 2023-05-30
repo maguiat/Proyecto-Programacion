@@ -51,6 +51,10 @@ header .logotipo a {
   color: inherit;
 }
 
+.logotipo img {
+  width: 30px;
+}
+
 header .logotipo::before,
 header .logotipo::after {
   content: "";
@@ -260,17 +264,55 @@ header nav a.activo::after {
 .portadas {
   display: flex;
   overflow: auto;
+  overflow-y: hidden;
   margin-top: 10px;
   margin-bottom: 30px;
 }
 
-.portadas img {
+
+
+.imagen {
+  position: relative;
+}
+
+.imagen img {
   width: 100%;
   object-fit: cover;
   width: 150px;
-  margin-right: 10px;
+  margin:20px;
   display: block;
+  transition: transform 0.3s;
 }
+
+.imagen:hover img {
+  transform: scale(1.2);
+} /*Zoom a la portada cuando pasamos el mouse*/
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 10%;
+  width: 80%;
+  height: 100%;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.7));
+  opacity: 0;
+  transform: scale(1.2);
+  transition: opacity 0.2s ease;
+  transition: transform 0.2s ease;
+} /*Máscara de opacidad para las portadas*/
+
+.imagen:hover .overlay {
+  opacity: 1;
+  transform: scale(1.2)
+}
+
+.texto {
+  position: absolute;
+  margin-top: 90%;
+  color: #fff;
+  font-size: 1.5em;
+}
+
 
 
 @keyframes slide {
@@ -300,6 +342,35 @@ header nav a.activo::after {
   }
 } /* Animación para las slides */
 
+.footer {
+  border-top: 1px solid var(--segundocolor);
+  text-align: center;
+  max-width: 100%;
+  background-color: var(--tercercolor);
+}
+
+
+.social-icons {
+  padding: 20px;
+}
+
+.social-icon {
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  font-size: 16px;
+  line-height: 30px;
+  text-align: center;
+}
+
+.social-icon i {
+  vertical-align: middle;
+}
+
+.footer p{
+  color:var(--primercolor)
+}
 
 
 /* ------- Media Quaries --------- */
