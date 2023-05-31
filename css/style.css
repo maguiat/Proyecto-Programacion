@@ -1,8 +1,8 @@
 :root {
-  --primercolor: #ff1e56;
-  --segundocolor: #ffac41;
-  --tercercolor: #323232;
-  --fondo: #000000;
+  --primercolor: #ff1e56;    /* Color primario */
+  --segundocolor: #ffac41;   /* Color secundario */
+  --tercercolor: #323232;    /* Color terciario */
+  --fondo: #000000;          /* Color de fondo */
 }
 
 * {
@@ -13,17 +13,20 @@
 }
 
 body {
-  background: var(--fondo);
-  font-family: "Open Sans", sans-serif;
+  background: var(--fondo);  /* Aplica el color de fondo definido en :root */
 }
 
 .contenedor {
   width: 90%;
-  margin: auto;
+  margin: auto;              /* Centra el contenedor en la página */
 }
 
-.header {
-  padding: 30px 0;
+header{
+  padding: 5px 0;
+  position: sticky;          /* El encabezado se mantiene en la parte superior de la página al hacer scroll */
+  top: 0;
+  z-index: 100;
+  background-color: var(--fondo);  
 }
 
 header .contenedor {
@@ -31,6 +34,9 @@ header .contenedor {
   justify-content: space-between;
   align-items: center;
   padding: 5px 0;
+  position: sticky;
+  top: 0;
+  z-index: 100;
 }
 
 header .titulo-buscador {
@@ -39,16 +45,15 @@ header .titulo-buscador {
 }
 
 header .logotipo {
-  font-family: "Bebas Neue", sans-serif;
   font-weight: normal;
-  color: var(--primercolor);
+  color: var(--primercolor); 
   font-size: 40px;
   position: relative;
 }
 
 header .logotipo a {
   text-decoration: none;
-  color: inherit;
+  color: var(--primercolor);
 }
 
 .logotipo img {
@@ -61,8 +66,8 @@ header .logotipo::after {
   position: absolute;
   width: 0;
   height: 2px;
-  background-color: var(--primercolor);
-  transition: width 0.3s ease-in-out;
+  background-color: var(--primercolor); 
+  transition: width 0.3s ease-in-out;   /* Transición animada para expandir el subrayado */
   opacity: 0;
 }
 
@@ -80,19 +85,19 @@ header .logotipo::after {
 
 header .logotipo:hover::before,
 header .logotipo:hover::after {
-  width: 100%;
-  opacity: 1;
+  width: 100%;    /* Expande el subrayado al 100% del ancho del logotipo */
+  opacity: 1;     /* Hace visible el subrayado */
 }
+
 
 /*--------Buscador---------*/
 
 header .buscador {
   margin-left: 20px;
   overflow: hidden;
-  transition: width 0.3s ease-in-out;
   border-radius: 20px;
   background-color: transparent;
-  width: 60px;
+  width: 200px;
 }
 
 header .buscador input {
@@ -103,23 +108,8 @@ header .buscador input {
   color: #aaa;
   border-radius: 20px;
   background-color: var(--tercercolor);
-  transition: padding 0.3s ease-in-out;
 }
 
-header .buscador input:focus {
-  width: 200px;
-  padding: 5px 10px;
-}
-
-header .buscador:hover,
-header .buscador:focus-within {
-  width: 200px;
-}
-
-header .buscador:hover input,
-header .buscador:focus-within input {
-  padding: 5px 10px;
-}
 
 /*--------Menú de navegación-----------*/
 
@@ -127,15 +117,10 @@ header nav a {
   position: relative;
   color: #aaa;
   text-decoration: none;
-  margin-right: 20px;
-  transition: color 0.3s ease-in-out;
+  width: 100%;
+  height: 100%;
 }
 
-header nav a:hover,
-header nav a.activo {
-  color: var(--primercolor);
-  transition: color 0.3s ease-in-out;
-}
 
 header nav a::after {
   content: "";
@@ -155,47 +140,128 @@ header nav a.activo::after {
 }
 
 /*------------Menú desplegable---------- */
-.Menu {
+header .Menu {
   position: relative;
   z-index: 1000;
 }
 
-.Menu ul{
+header .Menu ul{
   display: inline-flex;
 }
 
-.Menu ul li {
+header .Menu ul li {
   display: flex;
   position: relative;
+  padding-inline: 10px;
 }
 
-.Menu ul li a {
+header .Menu ul li a {
   display: block;
   padding: 10px;
+
 }
 
-.Menu ul li:hover > ul.dropdown-menu {
+header .Menu ul li:hover > ul.dropdown-menu {
   display: flex;
   top: 100%; 
 }
 
-.Menu ul ul.dropdown-menu {
+header .Menu ul ul.dropdown-menu {
   display: none;
   position: absolute;
   background: var(--tercercolor);
   flex-direction: column;
 }
 
-.Menu ul ul.dropdown-menu li {
+header .Menu ul ul.dropdown-menu li {
   display: flex;
 }
 
-.Menu ul ul.dropdown-menu li a {
+header .Menu ul ul.dropdown-menu li a {
   padding: 10px;
 }
 
-.Menu ul ul.dropdown-menu li a:hover {
+header .Menu ul ul.dropdown-menu li a:hover {
   background: var(--fondo);
+}
+
+/*-----Estilos login----*/
+header .Menu ul li.login-button {
+  position: relative;
+}
+
+header .Menu ul li.login-button button {
+  background-color: transparent;
+  color: #aaa;
+  border: 2px solid var(--primercolor);
+  border-radius: 20px;
+  cursor: pointer;
+  padding: 10px;
+  font-size: inherit;
+  transition: border-color 0.3s ease-in-out;
+}
+
+header .Menu ul li.login-button button:hover {
+  border-color: var(--segundocolor);
+}
+  
+
+header .Menu ul li.login-button .login-form {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: var(--tercercolor);
+  padding: 10px;
+  width: 200px;
+}
+
+header .Menu ul li.login-button:hover .login-form {
+  display: flex;
+  flex-direction: column;
+}
+
+header .Menu ul li.login-button .login-form input[type="text"],
+header .Menu ul li.login-button .login-form input[type="password"] {
+  width: 100%;
+  margin-bottom: 10px;
+  padding: 5px;
+  border-radius: 5px;
+  background-color: var(--fondo);
+  color: white;
+  border: none;
+}
+
+header .Menu ul li.login-button .login-form button {
+  width: 100%;
+  padding: 10px;
+  background-color: var(--primercolor);
+  color: #fff;
+  border-radius: 5px;
+  cursor: pointer;
+  
+}
+
+header .Menu ul li.login-button .login-form button:hover {
+  background-color: var(--segundocolor);
+}
+
+header .Menu ul li.login-button .login-form .register-form {
+  margin-top: 10px;
+}
+
+header .Menu ul li.login-button .login-form .register-form p {
+  margin: 10px;
+  color: white;
+}
+
+header .Menu ul li.login-button .login-form .register-form button a {
+  display: block;
+  width: 100%;
+  height: 100%;
+  color: white;
+  text-decoration: none;
 }
 
 
@@ -305,6 +371,38 @@ header nav a.activo::after {
 
 .subtitulos h2 {
   border-bottom: 1px solid var(--segundocolor);
+}
+
+/*------Flechas Carrusel-------*/
+
+.carrusel {
+  position: relative; 
+}
+
+.flecha-izquierda, .flecha-derecha {
+  display: inline-block;
+  position: absolute;
+	border: none;
+	background: rgba(0,0,0,0.3);
+	font-size: 24px;
+	color: #fff;
+	cursor: pointer;
+	z-index: 500;
+  top: 50%;
+  transform: translateY(-50%);
+	transition: .2s ease all;
+}
+
+.flecha-izquierda:hover, .flecha-derecha:hover {
+	background: rgba(0,0,0, .9);
+}
+
+.flecha-izquierda {
+	left: 0;
+}
+
+.flecha-derecha {
+	right: 0;
 }
 
 /*--------Estilos para los carrusel-------*/
@@ -434,13 +532,5 @@ header nav a.activo::after {
     text-align: center;
   }
 
-  .pelicula-principal {
-    font-size: 14px;
-  }
-
-  .pelicula-principal .descripcion {
-    max-width: 100%;
-  }
 }
-
 
