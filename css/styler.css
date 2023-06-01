@@ -1,28 +1,11 @@
-:root {
-    --primercolor: #ff1e56;    
-    --segundocolor: #ffac41;   
-    --tercercolor: #323232;    
-    --fondo: #000000;         
-  }
-  
-  * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: "Cairo";
-  }
+@import 'style.css';
   
   body {
-  background-image: url('https://www.islabit.com/wp-content/uploads/2020/12/cintas-online.jpg');
-  background-repeat: no-repeat;
-  background-size: cover; 
+    background-image: url('https://www.islabit.com/wp-content/uploads/2020/12/cintas-online.jpg');
+    background-repeat: no-repeat;
+    background-size: cover; 
   }
-  
-  .contenedor {
-    width: 90%;
-    margin: auto;             
-  }
-  
+
   h2 {
     color: var(--primercolor);
     text-align: center;
@@ -71,4 +54,3 @@
   input[type="submit"]:focus {
     outline: none;
   }
-  
