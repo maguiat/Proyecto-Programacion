@@ -110,6 +110,28 @@ header .buscador input {
   background-color: var(--tercercolor);
 }
 
+#listaPeliculas {
+  display: none;
+  max-height: 200px; 
+  overflow-y: auto; 
+}
+
+#listaPeliculas {
+  font-size: 30px;
+  margin-top: 20px;
+  list-style: none;
+  font-weight: 600;
+  color: #ffffff;
+  text-align: center;
+}
+li{
+  margin: 5px 0;
+}
+
+.filtro{
+  display: none;
+}
+
 /*--------Menú de navegación-----------*/
 
 header nav a {
