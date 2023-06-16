@@ -89,49 +89,6 @@ header .logotipo:hover::after {
   opacity: 1;     /* Hace visible el subrayado */
 }
 
-
-/*--------Buscador---------*/
-
-header .buscador {
-  margin-left: 20px;
-  overflow: hidden;
-  border-radius: 20px;
-  background-color: transparent;
-  width: 200px;
-}
-
-header .buscador input {
-  width: 100%;
-  padding: 5px;
-  border: none;
-  outline: none;
-  color: #aaa;
-  border-radius: 20px;
-  background-color: var(--tercercolor);
-}
-
-#listaPeliculas {
-  display: none;
-  max-height: 200px; 
-  overflow-y: auto; 
-}
-
-#listaPeliculas {
-  font-size: 30px;
-  margin-top: 20px;
-  list-style: none;
-  font-weight: 600;
-  color: #ffffff;
-  text-align: center;
-}
-li{
-  margin: 5px 0;
-}
-
-.filtro{
-  display: none;
-}
-
 /*--------Menú de navegación-----------*/
 
 header nav a {
@@ -158,6 +115,51 @@ header nav a::after {
 header nav a:hover::after,
 header nav a.activo::after {
   transform: scaleX(1);
+}
+
+/*--------Buscador---------*/
+
+header .buscador {
+  margin-left: 20px;
+  overflow: hidden;
+  border-radius: 20px;
+  background-color: transparent;
+  width: 200px;
+}
+
+header .buscador input {
+  width: 100%;
+  padding: 5px;
+  border: none;
+  outline: none;
+  color: #aaa;
+  border-radius: 20px;
+  background-color: var(--tercercolor);
+}
+
+.buscador {
+  position: relative;
+}
+
+#listaPeliculas {
+  max-height: 200px; 
+  overflow-y: auto; 
+}
+
+#listaPeliculas {
+  font-size: 20px;
+  margin-top: 20px;
+  list-style: none;
+  font-weight: 400;
+  color: #ffffff;
+  text-align: center;
+}
+li{
+  margin: 5px 0;
+}
+
+.filtro{
+  display: none;
 }
 
 /*------------Menú desplegable---------- */
