@@ -1,534 +1,503 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>CineMagic</title>
-    <link rel="icon" href="css/images/reproductor-de-video.png">
-    <link rel="stylesheet" href="css/style.css" />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Cairo:wght@200;300;400;600;700;900&amp;display=swap"
-      rel="stylesheet"
-    />
-  </head>
-  <body>
-    <header>
-      <div class="contenedor">
-        <div class="titulo-buscador">
-          <h2 class="logotipo">
-            <a href="index.html">
-              <img src="css/images/reproductor-de-video.png" alt="">
-              CineMagic
-            </a>
-          </h2>
-          <div class="buscador">
-            <input type="text" placeholder="Buscar..." />
-          </div>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CineMagic</title>
+  <link rel="icon" href="css/images/reproductor-de-video.png">
+  <link rel="stylesheet" href="css/style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@200;300;400;600;700;900&amp;display=swap"
+    rel="stylesheet" />
+</head>
+
+<body>
+  <header>
+    <div class="contenedor">
+      <div class="titulo-buscador">
+        <h2 class="logotipo">
+          <a href="index.html">
+            <img src="css/images/reproductor-de-video.png" alt="">
+            CineMagic
+          </a>
+        </h2>
+        <div class="buscador">
+          <input type="text" placeholder="Buscar..." />
         </div>
-        <nav class="Menu">
-          <ul>
-            <li><a href="#" class="activo">Inicio</a></li>
-            <li class="dropdown">
-              <a href="#">Series</a>
-              <ul class="dropdown-menu">
-                <li><a href="#">Acción</a></li>
-                <li><a href="#">Aventura</a></li>
-                <li><a href="#">Comedia</a></li>
-                <li><a href="#">Drama</a></li>
-                <li><a href="#">Ciencia ficción</a></li>
-                <li><a href="#">Terror</a></li>
-                <li><a href="#">Romance</a></li>
-              </ul>
-            </li>
-            <li class="dropdown">
-              <a href="#">Películas</a>
-              <ul class="dropdown-menu">
-                <li><a href="#">Acción</a></li>
-                <li><a href="#">Aventura</a></li>
-                <li><a href="#">Comedia</a></li>
-                <li><a href="#">Drama</a></li>
-                <li><a href="#">Ciencia ficción</a></li>
-                <li><a href="#">Terror</a></li>
-                <li><a href="#">Romance</a></li>
-              </ul>
-            </li>
-            <li class="login-button">
-              <button>Iniciar sesión</button>
-              <div class="login-form">
-                <form>
-                  <!-- Campos del formulario de inicio de sesión -->
-                  <input type="text" placeholder="Usuario">
-                  <input type="password" placeholder="Contraseña">
-                  <button>Iniciar sesión</button>
-                  <div class="register-form">
-                    <p>¿No tienes cuenta? ¡Regístrate!</p>
-                    <button class="register-button"><a href="registro.html">Registrarse</a></button>
-                  </div>
-                </form>
-              </div>
-            </li>
-          </ul>
-        </nav>
       </div>
-    </header>
-    <main>
-      <!---BANNER DE PELÍCULAS (X4)-->
-      <div class="slider">
+      <nav class="Menu">
         <ul>
-          <li>
-            <div class="image-container">
-              <div class="image-overlay"></div>
-              <img src="css/images/sirenita.png" alt="portada de la sirenita" />
-              <div class="image-text">
-                <h3>La Sirenita</h3>
-                <h4>
-                  Ariel, una joven sirena sueña con explorar el mundo humano en
-                  la superficie
-                </h4>
-                <p>
-                  Ariel desafía a su padre, el rey Tritón, y busca experimentar
-                  la vida en tierra firme. La malvada bruja Úrsula ofrece
-                  convertirla en humana a cambio de su voz. Ariel acepta con la
-                  esperanza de enamorar al príncipe Eric y se adentra en un
-                  mundo desconocido. Con la ayuda de sus amigos, Sebastian y
-                  Flounder, lucha por encontrar su lugar y adaptarse a esta
-                  nueva vida.
-                </p>
-                <button class="trailer-button">
-                  <a
-                    href="https://www.youtube.com/watch?v=8LECfkm4fJA"
-                    target="_blank"
-                    >Ver tráiler</a
-                  >
-                </button>
-              </div>
-            </div>
+          <li><a href="#" class="activo">Inicio</a></li>
+          <li class="dropdown">
+            <a href="#">Series</a>
+            <ul class="dropdown-menu">
+              <li><a href="#">Acción</a></li>
+              <li><a href="#">Aventura</a></li>
+              <li><a href="#">Comedia</a></li>
+              <li><a href="#">Drama</a></li>
+              <li><a href="#">Ciencia ficción</a></li>
+              <li><a href="#">Terror</a></li>
+              <li><a href="#">Romance</a></li>
+            </ul>
           </li>
-          <li>
-            <div class="image-container">
-              <div class="image-overlay"></div>
-              <img src="css/images/super-mario.png" alt="" />
-              <div class="image-text">
-                <h3>Super Mario Bros</h3>
-                <h4>
-                  La película es una historia de coraje, amistad y heroísmo
-                </h4>
-                <p>
-                  Mario y Luigi, los plomeros de Brooklyn, se adentran en un
-                  mundo fantástico a través de una misteriosa tubería. Allí,
-                  deben enfrentar al temible Bowser para rescatar a la princesa
-                  Peach. Con la ayuda de su aliado Toad, luchan contra
-                  obstáculos y enemigos, descubriendo sus propios poderes en el
-                  camino. ¿Podrán salvar a la princesa y derrotar a Bowser?
-                </p>
-                <button class="trailer-button">
-                  <a
-                    href="https://www.youtube.com/watch?v=SvJwEiy2Wok"
-                    target="_blank"
-                    >Ver tráiler</a
-                  >
-                </button>
-            </div>
+          <li class="dropdown">
+            <a href="#">Películas</a>
+            <ul class="dropdown-menu">
+              <li><a href="#">Acción</a></li>
+              <li><a href="#">Aventura</a></li>
+              <li><a href="#">Comedia</a></li>
+              <li><a href="#">Drama</a></li>
+              <li><a href="#">Ciencia ficción</a></li>
+              <li><a href="#">Terror</a></li>
+              <li><a href="#">Romance</a></li>
+            </ul>
           </li>
-          <li>
-            <div class="image-container">
-              <div class="image-overlay"></div>
-              <img src="css/images/ryfx.png" alt="" />
-              <div class="image-text">
-                <h3>Rápidos y Furiosos X</h3>
-                <h4>
-                  La familia de Dom Toretto se enfrenta a un enemigo sediento de
-                  venganza
-                </h4>
-                <p>
-                  Dom Toretto y su familia siempre han estado a la altura de la
-                  situación, cumpliendo misiones casi imposibles, pero su
-                  valentía y astucia se pone a prueba una vez más. Un enemigo
-                  letal regresa para vengarse y destruir todo lo que Dom ama.
-                  Ahora el futuro de la familia pende de un hilo y deberán
-                  trabajar juntos para hacer frente al mayor desafío que jamás
-                  hayan vivido.
-                </p>
-                <button class="trailer-button">
-                  <a
-                    href="https://www.youtube.com/watch?v=4TOpS3cdb3c&t=10s"
-                    target="_blank"
-                    >Ver tráiler</a
-                  >
-                </button>
-              </div>
-            </div>
-          </li>
-          <li>
-            <div class="image-container">
-              <div class="image-overlay"></div>
-              <img src="css/images/guardianes.png" alt="" />
-              <div class="image-text">
-                <h3>Guardianes de la Galaxia vol. 3</h3>
-                <h4>El pasado acecha a Rocket y pone su vida en peligro</h4>
-                <p>
-                  En esta nueva entrega de Guardianes de la Galaxia, Peter Quill
-                  debe reunir a su equipo para una nueva y desafiante aventura:
-                  salvar la vida de Rocket. Star-Lord, quien aún se recupera de
-                  haber perdido a Gamora, se embarca en una misión que lo obliga
-                  a abandonar Knowhere y afrontar nuevos villanos que ponen en
-                  peligro a los Guardianes tales como los conocemos.
-                </p>
-                <button class="trailer-button">
-                  <a
-                    href="https://www.youtube.com/watch?v=nFYA2kdHy0s"
-                    target="_blank"
-                    >Ver tráiler</a
-                  >
-                </button>
-              </div>
+          <li class="login-button">
+            <button>Iniciar sesión</button>
+            <div class="login-form">
+              <form>
+                <!-- Campos del formulario de inicio de sesión -->
+                <input type="text" placeholder="Usuario">
+                <input type="password" placeholder="Contraseña">
+                <button>Iniciar sesión</button>
+                <div class="register-form">
+                  <p>¿No tienes cuenta? ¡Regístrate!</p>
+                  <button class="register-button"><a href="registro.html">Registrarse</a></button>
+                </div>
+              </form>
             </div>
           </li>
         </ul>
-      </div>
+      </nav>
+    </div>
+  </header>
+  <main>
+    <!---BANNER DE PELÍCULAS (X4)-->
+    <div class="slider">
+      <ul>
+        <li>
+          <div class="image-container">
+            <div class="image-overlay"></div>
+            <img src="css/images/elementos.png" alt="portada de elementos" />
+            <div class="image-text">
+              <h3>Elementos</h3>
+              <h4>
+                Elementos explora el vínculo que florece entre dos almas en extremos opuestos del espectro
+              </h4>
+              <p>
+                En "La Ciudad Elemento", Ember y Wade, que personifican el fuego y el agua respectivamente, descubren
+                que a pesar de sus diferencias, tienen una conexión mágica. Su relación se desarrolla en un viaje
+                transformador, navegando a través de las disparidades de sus elementos.
+              </p>
+              <button class="trailer-button">
+                <a href="https://www.youtube.com/watch?v=7KIWqmLsJRM" target="_blank">Ver tráiler</a>
+              </button>
+            </div>
+          </div>
+        </li>
+        <li>
+          <div class="image-container">
+            <div class="image-overlay"></div>
+            <img src="css/images/flash.png" alt="portada de the flash" />
+            <div class="image-text">
+              <h3>Flash</h3>
+              <h4>
+                Flash se ve obligado a forjar alianzas inesperadas para enfrentarse a una amenaza descomunal
+              </h4>
+              <p>
+                Barry Allen, el hombre más veloz del mundo, viaja en el tiempo para salvar a su madre, pero desencadena
+                eventos que cambian drásticamente la realidad. Ahora debe unir aliados para enfrentar al malvado General
+                Zod y salvar a la humanidad de un destino sombrío.
+              </p>
+              <button class="trailer-button">
+                <a href="https://www.youtube.com/watch?v=r51cYVZWKdY" target="_blank">Ver tráiler</a>
+              </button>
+            </div>
+        </li>
+        <li>
+          <div class="image-container">
+            <div class="image-overlay"></div>
+            <img src="css/images/transformers.png" alt="portada de transformers" />
+            <div class="image-text">
+              <h3>Transformers: El despertar de las bestias</h3>
+              <h4>
+                Bumblebee y Starscream vuelven por más acción en Rise of the Beasts
+              </h4>
+              <p>
+                En "Transformers: El Despertar de las Bestias", Autobots, Decepticons, Predacons, Maximals y Terrorcons
+                se enfrentan en una épica batalla en Brooklyn en 1994, mientras los humanos luchan por evitar una
+                catástrofe que amenaza a la humanidad.
+              </p>
+              <button class="trailer-button">
+                <a href="https://www.youtube.com/watch?v=s6yBw1CXSMA" target="_blank">Ver tráiler</a>
+              </button>
+            </div>
+          </div>
+        </li>
+        <li>
+          <div class="image-container">
+            <div class="image-overlay"></div>
+            <img src="css/images/spiderman.png" alt="portada de spiderman" />
+            <div class="image-text">
+              <h3>Spiderman: Cruzando el multiverso</h3>
+              <h4>Miles Morales y Gwen Stacey se embarcan en una nueva y épica aventura a través del multiverso</h4>
+              <p>
+                En "Spider-Man: Cruzando el Multiverso", Miles Morales y Spider-Woman se unen para detener a un villano
+                con poderes multidimensionales. En su viaje, encuentran a otros héroes dispuestos a proteger el
+                multiverso de la destrucción. Juntos, enfrentan la amenaza y luchan por salvar la realidad.
+              </p>
+              <button class="trailer-button">
+                <a href="https://www.youtube.com/watch?v=oBmazlyP220" target="_blank">Ver tráiler</a>
+              </button>
+            </div>
+          </div>
+        </li>
+      </ul>
+    </div>
 
-      <!--CARRUSELES-->
-      <div class="subtitulos">
-        <h2>Más vistas en la semana</h2>
-      </div>
-      <div class="carrusel">
-        <button role="button" id="flecha-izquierda" class="flecha-izquierda"><i class="fas fa-angle-left"></i></button>
-        <div class="portadas">
-          <div class="imagen">
-            <img src="css/images/1.jpg" alt="Imagen 1" />
-            <div class="overlay">
-              <div class="texto">
-                <h5>Título película</h5>
-              </div>
-            </div>
-          </div>
-          <div class="imagen">
-            <img src="css/images/2.jpg" alt="Imagen 2" />
-            <div class="overlay">
-              <div class="texto">
-                <h5>Título película</h5>
-              </div>
-            </div>
-          </div>
-          <!-- Repite la estructura para las demás imágenes -->
-          <div class="imagen">
-            <img src="css/images/3.jpg" alt="Imagen 3" />
-            <div class="overlay">
-              <div class="texto">
-                <h5>Título película</h5>
-              </div>
-            </div>
-          </div>
-          <div class="imagen">
-            <img src="css/images/4.jpg" alt="Imagen 4" />
-            <div class="overlay">
-              <div class="texto">
-                <h5>Título película</h5>
-              </div>
-            </div>
-          </div>
-          <div class="imagen">
-            <img src="css/images/5.jpg" alt="Imagen 5" />
-            <div class="overlay">
-              <div class="texto">
-                <h5>Título película</h5>
-              </div>
-            </div>
-          </div>
-          <div class="imagen">
-            <img src="css/images/6.jpg" alt="Imagen 6" />
-            <div class="overlay">
-              <div class="texto">
-                <h5>Título película</h5>
-              </div>
-            </div>
-          </div>
-          <div class="imagen">
-            <img src="css/images/7.jpg" alt="Imagen 7" />
-            <div class="overlay">
-              <div class="texto">
-                <h5>Título película</h5>
-              </div>
-            </div>
-          </div>
-          <div class="imagen">
-            <img src="css/images/8.jpg" alt="Imagen 8" />
-            <div class="overlay">
-              <div class="texto">
-                <h5>Título película</h5>
-              </div>
-            </div>
-          </div>
-          <div class="imagen">
-            <img src="css/images/9.jpg" alt="Imagen 9" />
-            <div class="overlay">
-              <div class="texto">
-                <h5>Título película</h5>
-              </div>
-            </div>
-          </div>
-          <div class="imagen">
-            <img src="css/images/10.jpg" alt="Imagen 10" />
-            <div class="overlay">
-              <div class="texto">
-                <h5>Título película</h5>
-              </div>
-            </div>
-          </div>
-          <div class="imagen">
-            <img src="css/images/11.jpg" alt="Imagen 11" />
-            <div class="overlay">
-              <div class="texto">
-                <h5>Título película</h5>
-              </div>
-            </div>
-          </div>
-          <div class="imagen">
-            <img src="css/images/12.jpg" alt="Imagen 12" />
-            <div class="overlay">
-              <div class="texto">
-                <h5>Título película</h5>
-              </div>
+    <!--CARRUSELES-->
+    <div class="subtitulos">
+      <h2>Más vistas en la semana</h2>
+    </div>
+    <div class="carrusel">
+      <button role="button" id="flecha-izquierda" class="flecha-izquierda"><i class="fas fa-angle-left"></i></button>
+      <div class="portadas">
+        <div class="imagen">
+          <img src="css/images/1.jpg" alt="Imagen 1" />
+          <div class="overlay">
+            <div class="texto">
+              <h5>Título película</h5>
             </div>
           </div>
         </div>
-        <button role="button" id="flecha-derecha" class="flecha-derecha"><i class="fas fa-angle-right"></i></button>
-      </div>
-      
-
-      <div class="subtitulos">
-        <h2>Disponibles en Netflix</h2>
-      </div>
-      <div class="carrusel">
-        <button role="button" id="flecha-izquierda" class="flecha-izquierda"><i class="fas fa-angle-left"></i></button>
-        <div class="portadas">
-          <div class="imagen">
-            <img src="css/images/1.jpg" alt="Imagen 1" />
-            <div class="overlay">
-              <div class="texto">
-                <h5>Título película</h5>
-              </div>
-            </div>
-          </div>
-          <div class="imagen">
-            <img src="css/images/2.jpg" alt="Imagen 2" />
-            <div class="overlay">
-              <div class="texto">
-                <h5>Título película</h5>
-              </div>
-            </div>
-          </div>
-          <!-- Repite la estructura para las demás imágenes -->
-          <div class="imagen">
-            <img src="css/images/3.jpg" alt="Imagen 3" />
-            <div class="overlay">
-              <div class="texto">
-                <h5>Título película</h5>
-              </div>
-            </div>
-          </div>
-          <div class="imagen">
-            <img src="css/images/4.jpg" alt="Imagen 4" />
-            <div class="overlay">
-              <div class="texto">
-                <h5>Título película</h5>
-              </div>
-            </div>
-          </div>
-          <div class="imagen">
-            <img src="css/images/5.jpg" alt="Imagen 5" />
-            <div class="overlay">
-              <div class="texto">
-                <h5>Título película</h5>
-              </div>
-            </div>
-          </div>
-          <div class="imagen">
-            <img src="css/images/6.jpg" alt="Imagen 6" />
-            <div class="overlay">
-              <div class="texto">
-                <h5>Título película</h5>
-              </div>
-            </div>
-          </div>
-          <div class="imagen">
-            <img src="css/images/7.jpg" alt="Imagen 7" />
-            <div class="overlay">
-              <div class="texto">
-                <h5>Título película</h5>
-              </div>
-            </div>
-          </div>
-          <div class="imagen">
-            <img src="css/images/8.jpg" alt="Imagen 8" />
-            <div class="overlay">
-              <div class="texto">
-                <h5>Título película</h5>
-              </div>
-            </div>
-          </div>
-          <div class="imagen">
-            <img src="css/images/9.jpg" alt="Imagen 9" />
-            <div class="overlay">
-              <div class="texto">
-                <h5>Título película</h5>
-              </div>
-            </div>
-          </div>
-          <div class="imagen">
-            <img src="css/images/10.jpg" alt="Imagen 10" />
-            <div class="overlay">
-              <div class="texto">
-                <h5>Título película</h5>
-              </div>
-            </div>
-          </div>
-          <div class="imagen">
-            <img src="css/images/11.jpg" alt="Imagen 11" />
-            <div class="overlay">
-              <div class="texto">
-                <h5>Título película</h5>
-              </div>
-            </div>
-          </div>
-          <div class="imagen">
-            <img src="css/images/12.jpg" alt="Imagen 12" />
-            <div class="overlay">
-              <div class="texto">
-                <h5>Título película</h5>
-              </div>
+        <div class="imagen">
+          <img src="css/images/2.jpg" alt="Imagen 2" />
+          <div class="overlay">
+            <div class="texto">
+              <h5>Título película</h5>
             </div>
           </div>
         </div>
-        <button role="button" id="flecha-derecha" class="flecha-derecha"><i class="fas fa-angle-right"></i></button>
-      </div>
-
-      <div class="subtitulos">
-        <h2>Series en emisión</h2>
-      </div>
-      <div class="carrusel">
-        <button role="button" id="flecha-izquierda" class="flecha-izquierda"><i class="fas fa-angle-left"></i></button>
-        <div class="portadas">
-          <div class="imagen">
-            <img src="css/images/1.jpg" alt="Imagen 1" />
-            <div class="overlay">
-              <div class="texto">
-                <h5>Título película</h5>
-              </div>
-            </div>
-          </div>
-          <div class="imagen">
-            <img src="css/images/2.jpg" alt="Imagen 2" />
-            <div class="overlay">
-              <div class="texto">
-                <h5>Título película</h5>
-              </div>
-            </div>
-          </div>
-          <!-- Repite la estructura para las demás imágenes -->
-          <div class="imagen">
-            <img src="css/images/3.jpg" alt="Imagen 3" />
-            <div class="overlay">
-              <div class="texto">
-                <h5>Título película</h5>
-              </div>
-            </div>
-          </div>
-          <div class="imagen">
-            <img src="css/images/4.jpg" alt="Imagen 4" />
-            <div class="overlay">
-              <div class="texto">
-                <h5>Título película</h5>
-              </div>
-            </div>
-          </div>
-          <div class="imagen">
-            <img src="css/images/5.jpg" alt="Imagen 5" />
-            <div class="overlay">
-              <div class="texto">
-                <h5>Título película</h5>
-              </div>
-            </div>
-          </div>
-          <div class="imagen">
-            <img src="css/images/6.jpg" alt="Imagen 6" />
-            <div class="overlay">
-              <div class="texto">
-                <h5>Título película</h5>
-              </div>
-            </div>
-          </div>
-          <div class="imagen">
-            <img src="css/images/7.jpg" alt="Imagen 7" />
-            <div class="overlay">
-              <div class="texto">
-                <h5>Título película</h5>
-              </div>
-            </div>
-          </div>
-          <div class="imagen">
-            <img src="css/images/8.jpg" alt="Imagen 8" />
-            <div class="overlay">
-              <div class="texto">
-                <h5>Título película</h5>
-              </div>
-            </div>
-          </div>
-          <div class="imagen">
-            <img src="css/images/9.jpg" alt="Imagen 9" />
-            <div class="overlay">
-              <div class="texto">
-                <h5>Título película</h5>
-              </div>
-            </div>
-          </div>
-          <div class="imagen">
-            <img src="css/images/10.jpg" alt="Imagen 10" />
-            <div class="overlay">
-              <div class="texto">
-                <h5>Título película</h5>
-              </div>
-            </div>
-          </div>
-          <div class="imagen">
-            <img src="css/images/11.jpg" alt="Imagen 11" />
-            <div class="overlay">
-              <div class="texto">
-                <h5>Título película</h5>
-              </div>
-            </div>
-          </div>
-          <div class="imagen">
-            <img src="css/images/12.jpg" alt="Imagen 12" />
-            <div class="overlay">
-              <div class="texto">
-                <h5>Título película</h5>
-              </div>
+        <!-- Repite la estructura para las demás imágenes -->
+        <div class="imagen">
+          <img src="css/images/3.jpg" alt="Imagen 3" />
+          <div class="overlay">
+            <div class="texto">
+              <h5>Título película</h5>
             </div>
           </div>
         </div>
-        <button role="button" id="flecha-derecha" class="flecha-derecha"><i class="fas fa-angle-right"></i></button>
-      </div>
-    </main>
-
-    
-    <footer class="footer">
-        <div class="social-icons">
-          <a href="https://www.facebook.com/" target="_blank">
-            <img src="/css/images/facebook.png" alt="Facebook" class="social-icon">
-          </a>
-          <a href="https://www.instagram.com/" target="_blank">
-            <img src="/css/images/instagram.png" alt="Instagram" class="social-icon">
-          </a>
-          <a href="https://twitter.com/" target="_blank">
-            <img src="/css/images/twitter.png" alt="Twitter" class="social-icon">
-          </a>
+        <div class="imagen">
+          <img src="css/images/4.jpg" alt="Imagen 4" />
+          <div class="overlay">
+            <div class="texto">
+              <h5>Título película</h5>
+            </div>
+          </div>
         </div>
-        <p>© 2023 Todos los derechos reservados</p>
-    </footer>
+        <div class="imagen">
+          <img src="css/images/5.jpg" alt="Imagen 5" />
+          <div class="overlay">
+            <div class="texto">
+              <h5>Título película</h5>
+            </div>
+          </div>
+        </div>
+        <div class="imagen">
+          <img src="css/images/6.jpg" alt="Imagen 6" />
+          <div class="overlay">
+            <div class="texto">
+              <h5>Título película</h5>
+            </div>
+          </div>
+        </div>
+        <div class="imagen">
+          <img src="css/images/7.jpg" alt="Imagen 7" />
+          <div class="overlay">
+            <div class="texto">
+              <h5>Título película</h5>
+            </div>
+          </div>
+        </div>
+        <div class="imagen">
+          <img src="css/images/8.jpg" alt="Imagen 8" />
+          <div class="overlay">
+            <div class="texto">
+              <h5>Título película</h5>
+            </div>
+          </div>
+        </div>
+        <div class="imagen">
+          <img src="css/images/9.jpg" alt="Imagen 9" />
+          <div class="overlay">
+            <div class="texto">
+              <h5>Título película</h5>
+            </div>
+          </div>
+        </div>
+        <div class="imagen">
+          <img src="css/images/10.jpg" alt="Imagen 10" />
+          <div class="overlay">
+            <div class="texto">
+              <h5>Título película</h5>
+            </div>
+          </div>
+        </div>
+        <div class="imagen">
+          <img src="css/images/11.jpg" alt="Imagen 11" />
+          <div class="overlay">
+            <div class="texto">
+              <h5>Título película</h5>
+            </div>
+          </div>
+        </div>
+        <div class="imagen">
+          <img src="css/images/12.jpg" alt="Imagen 12" />
+          <div class="overlay">
+            <div class="texto">
+              <h5>Título película</h5>
+            </div>
+          </div>
+        </div>
+      </div>
+      <button role="button" id="flecha-derecha" class="flecha-derecha"><i class="fas fa-angle-right"></i></button>
+    </div>
 
-    <script src="https://kit.fontawesome.com/2c36e9b7b1.js" crossorigin="anonymous"></script>
-    <script src="js/main.js"></script>
-  </body>
+
+    <div class="subtitulos">
+      <h2>Disponibles en Netflix</h2>
+    </div>
+    <div class="carrusel">
+      <button role="button" id="flecha-izquierda" class="flecha-izquierda"><i class="fas fa-angle-left"></i></button>
+      <div class="portadas">
+        <div class="imagen">
+          <img src="css/images/1.jpg" alt="Imagen 1" />
+          <div class="overlay">
+            <div class="texto">
+              <h5>Título película</h5>
+            </div>
+          </div>
+        </div>
+        <div class="imagen">
+          <img src="css/images/2.jpg" alt="Imagen 2" />
+          <div class="overlay">
+            <div class="texto">
+              <h5>Título película</h5>
+            </div>
+          </div>
+        </div>
+        <!-- Repite la estructura para las demás imágenes -->
+        <div class="imagen">
+          <img src="css/images/3.jpg" alt="Imagen 3" />
+          <div class="overlay">
+            <div class="texto">
+              <h5>Título película</h5>
+            </div>
+          </div>
+        </div>
+        <div class="imagen">
+          <img src="css/images/4.jpg" alt="Imagen 4" />
+          <div class="overlay">
+            <div class="texto">
+              <h5>Título película</h5>
+            </div>
+          </div>
+        </div>
+        <div class="imagen">
+          <img src="css/images/5.jpg" alt="Imagen 5" />
+          <div class="overlay">
+            <div class="texto">
+              <h5>Título película</h5>
+            </div>
+          </div>
+        </div>
+        <div class="imagen">
+          <img src="css/images/6.jpg" alt="Imagen 6" />
+          <div class="overlay">
+            <div class="texto">
+              <h5>Título película</h5>
+            </div>
+          </div>
+        </div>
+        <div class="imagen">
+          <img src="css/images/7.jpg" alt="Imagen 7" />
+          <div class="overlay">
+            <div class="texto">
+              <h5>Título película</h5>
+            </div>
+          </div>
+        </div>
+        <div class="imagen">
+          <img src="css/images/8.jpg" alt="Imagen 8" />
+          <div class="overlay">
+            <div class="texto">
+              <h5>Título película</h5>
+            </div>
+          </div>
+        </div>
+        <div class="imagen">
+          <img src="css/images/9.jpg" alt="Imagen 9" />
+          <div class="overlay">
+            <div class="texto">
+              <h5>Título película</h5>
+            </div>
+          </div>
+        </div>
+        <div class="imagen">
+          <img src="css/images/10.jpg" alt="Imagen 10" />
+          <div class="overlay">
+            <div class="texto">
+              <h5>Título película</h5>
+            </div>
+          </div>
+        </div>
+        <div class="imagen">
+          <img src="css/images/11.jpg" alt="Imagen 11" />
+          <div class="overlay">
+            <div class="texto">
+              <h5>Título película</h5>
+            </div>
+          </div>
+        </div>
+        <div class="imagen">
+          <img src="css/images/12.jpg" alt="Imagen 12" />
+          <div class="overlay">
+            <div class="texto">
+              <h5>Título película</h5>
+            </div>
+          </div>
+        </div>
+      </div>
+      <button role="button" id="flecha-derecha" class="flecha-derecha"><i class="fas fa-angle-right"></i></button>
+    </div>
+
+    <div class="subtitulos">
+      <h2>Series en emisión</h2>
+    </div>
+    <div class="carrusel">
+      <button role="button" id="flecha-izquierda" class="flecha-izquierda"><i class="fas fa-angle-left"></i></button>
+      <div class="portadas">
+        <div class="imagen">
+          <img src="css/images/1.jpg" alt="Imagen 1" />
+          <div class="overlay">
+            <div class="texto">
+              <h5>Título película</h5>
+            </div>
+          </div>
+        </div>
+        <div class="imagen">
+          <img src="css/images/2.jpg" alt="Imagen 2" />
+          <div class="overlay">
+            <div class="texto">
+              <h5>Título película</h5>
+            </div>
+          </div>
+        </div>
+        <!-- Repite la estructura para las demás imágenes -->
+        <div class="imagen">
+          <img src="css/images/3.jpg" alt="Imagen 3" />
+          <div class="overlay">
+            <div class="texto">
+              <h5>Título película</h5>
+            </div>
+          </div>
+        </div>
+        <div class="imagen">
+          <img src="css/images/4.jpg" alt="Imagen 4" />
+          <div class="overlay">
+            <div class="texto">
+              <h5>Título película</h5>
+            </div>
+          </div>
+        </div>
+        <div class="imagen">
+          <img src="css/images/5.jpg" alt="Imagen 5" />
+          <div class="overlay">
+            <div class="texto">
+              <h5>Título película</h5>
+            </div>
+          </div>
+        </div>
+        <div class="imagen">
+          <img src="css/images/6.jpg" alt="Imagen 6" />
+          <div class="overlay">
+            <div class="texto">
+              <h5>Título película</h5>
+            </div>
+          </div>
+        </div>
+        <div class="imagen">
+          <img src="css/images/7.jpg" alt="Imagen 7" />
+          <div class="overlay">
+            <div class="texto">
+              <h5>Título película</h5>
+            </div>
+          </div>
+        </div>
+        <div class="imagen">
+          <img src="css/images/8.jpg" alt="Imagen 8" />
+          <div class="overlay">
+            <div class="texto">
+              <h5>Título película</h5>
+            </div>
+          </div>
+        </div>
+        <div class="imagen">
+          <img src="css/images/9.jpg" alt="Imagen 9" />
+          <div class="overlay">
+            <div class="texto">
+              <h5>Título película</h5>
+            </div>
+          </div>
+        </div>
+        <div class="imagen">
+          <img src="css/images/10.jpg" alt="Imagen 10" />
+          <div class="overlay">
+            <div class="texto">
+              <h5>Título película</h5>
+            </div>
+          </div>
+        </div>
+        <div class="imagen">
+          <img src="css/images/11.jpg" alt="Imagen 11" />
+          <div class="overlay">
+            <div class="texto">
+              <h5>Título película</h5>
+            </div>
+          </div>
+        </div>
+        <div class="imagen">
+          <img src="css/images/12.jpg" alt="Imagen 12" />
+          <div class="overlay">
+            <div class="texto">
+              <h5>Título película</h5>
+            </div>
+          </div>
+        </div>
+      </div>
+      <button role="button" id="flecha-derecha" class="flecha-derecha"><i class="fas fa-angle-right"></i></button>
+    </div>
+  </main>
+
+
+  <footer class="footer">
+    <div class="social-icons">
+      <a href="https://www.facebook.com/" target="_blank">
+        <img src="/css/images/facebook.png" alt="Facebook" class="social-icon">
+      </a>
+      <a href="https://www.instagram.com/" target="_blank">
+        <img src="/css/images/instagram.png" alt="Instagram" class="social-icon">
+      </a>
+      <a href="https://twitter.com/" target="_blank">
+        <img src="/css/images/twitter.png" alt="Twitter" class="social-icon">
+      </a>
+    </div>
+    <p>© 2023 Todos los derechos reservados</p>
+  </footer>
+
+  <script src="https://kit.fontawesome.com/2c36e9b7b1.js" crossorigin="anonymous"></script>
+  <script src="js/main.js"></script>
+</body>
+
 </html>
