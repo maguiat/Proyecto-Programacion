@@ -623,7 +623,7 @@ body.modal-open {
   overflow-y: hidden;
   overflow-x: scroll;
   scrollbar-width: thin;
-  scrollbar-color: var(--fondo) var(--tercercolor);
+  scrollbar-color: var(--fondo) var(--fondo);
 }
 
 .custom-scrollbar::-webkit-scrollbar {
@@ -635,11 +635,11 @@ body.modal-open {
 }
 
 .custom-scrollbar::-webkit-scrollbar-thumb {
-  background-color: var(--tercercolor);
+  background-color: var(--fondo);
 }
 
 .custom-scrollbar:hover::-webkit-scrollbar-thumb {
-  background-color: #aaa;
+  background-color: var(--fondo);
 }
 
 
