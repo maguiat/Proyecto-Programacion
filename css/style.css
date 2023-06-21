@@ -323,10 +323,15 @@ li{
 
 /* ------- Estilos para el banner de películas (slides) --------- */
 
-.slider {
-  width: 100%;
+.slider-container {
   overflow: hidden;
   position: relative;
+  transition: transform 0.5s ease-in-out; 
+}
+
+.slider {
+  display: flex;
+  transition: transform 0.5s ease-in-out; 
 }
 
 .slider ul {
@@ -374,6 +379,31 @@ li{
   object-fit: cover;
 }
 
+.slider li {
+  flex-shrink: 0;
+}
+
+/* Estilos para los puntos de paginación */
+.pagination {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+.pagination span {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.5);
+  margin: 0 5px;
+  cursor: pointer;
+}
+
+.pagination span.active {
+  background-color: white;
+}
+
 /*-------Estilos para la capa sobre las imagenes del banner-----------*/
 .image-overlay {
   position: absolute;
@@ -416,7 +446,6 @@ li{
 .trailer-button:hover {
   background-color: var(--primercolor);
 }
-
 
 
 .subtitulos {

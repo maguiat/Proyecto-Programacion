@@ -75,9 +75,9 @@
     </header>
     <main>
       <!---BANNER DE PELÍCULAS (X4)-->
-      <div class="slider">
-        <ul>
-          <li>
+      <div class="slider-container">
+        <ul class="slider">
+          <li data-index="1">
             <div class="image-container">
               <div class="image-overlay"></div>
               <img src="css/images/sirenita.png" alt="portada de la sirenita" />
@@ -106,7 +106,7 @@
               </div>
             </div>
           </li>
-          <li>
+          <li data-index="2">
             <div class="image-container">
               <div class="image-overlay"></div>
               <img src="css/images/super-mario.png" alt="" />
@@ -132,7 +132,7 @@
                 </button>
             </div>
           </li>
-          <li>
+          <li data-index="3">
             <div class="image-container">
               <div class="image-overlay"></div>
               <img src="css/images/ryfx.png" alt="" />
@@ -161,7 +161,7 @@
               </div>
             </div>
           </li>
-          <li>
+          <li data-index="4">
             <div class="image-container">
               <div class="image-overlay"></div>
               <img src="css/images/guardianes.png" alt="" />
@@ -187,6 +187,12 @@
             </div>
           </li>
         </ul>
+        <div class="pagination">
+          <span class="active"></span>
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
       </div>
 
       <!--CARRUSELES-->
@@ -532,5 +538,6 @@
     <script src="https://kit.fontawesome.com/2c36e9b7b1.js" crossorigin="anonymous"></script>
     <script src="js/buscador.js"></script>
     <script src="js/main.js"></script>
+    <script src="js/banner.js"></script>
   </body>
 </html>
