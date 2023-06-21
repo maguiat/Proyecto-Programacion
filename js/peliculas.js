@@ -13,7 +13,7 @@ function setupModal() {
     });
   }
 
-dcument.addEventListener("DOMContentLoaded", function () {
+document.addEventListener("DOMContentLoaded", function () {
     fetch("data/peliculas.json")
         .then((response) => response.json())
         .then((data) => {
