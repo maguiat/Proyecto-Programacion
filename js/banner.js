@@ -44,4 +44,3 @@ paginationItems.forEach((item, index) => {
 });
 
 slideInterval = setInterval(moveToNextSlide, intervalTime);
-

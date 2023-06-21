@@ -486,6 +486,85 @@ li{
 	right: 0;
 }
 
+/*-------Modal------*/
+body.modal-open {
+  overflow: hidden;
+}
+
+.modal-contenido {
+  background-color: var(--tercercolor);
+  margin: 10% auto;
+  padding: 20px;
+  border: 1px solid #888;
+  max-width: 80%;
+  width: 600px;
+  color: white;
+}
+
+.modal-cerrar {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.modal-cerrar:hover,
+.modal-cerrar:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.movie-info {
+  display: flex;
+}
+
+.movie-info {
+  display: flex;
+}
+
+.movie-poster img {
+  width: 200px;
+  height: auto;
+}
+
+.movie-details {
+  margin-left: 20px;
+}
+
+.movie-details h2 {
+  font-size: 24px;
+  margin: 0;
+}
+
+.movie-details p {
+  margin: 5px 0;
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 100%;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.4);
+  overflow: auto;
+  animation: modal-appear 0.3s forwards;
+}
+
+@keyframes modal-appear {
+  from {
+    top: 100%;
+  }
+  to {
+    top: 0;
+  }
+}
+
+
 /*--------Estilos para los carrusel-------*/
 .portadas {
   display: flex;
@@ -539,6 +618,29 @@ li{
   font-size: 1.5em;
 }
 
+/*---Estilo para el scroll de los carruseles---*/
+.custom-scrollbar {
+  overflow-y: hidden;
+  overflow-x: scroll;
+  scrollbar-width: thin;
+  scrollbar-color: var(--fondo) var(--tercercolor);
+}
+
+.custom-scrollbar::-webkit-scrollbar {
+  width: 3px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-track {
+  background-color: var(--fondo);
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background-color: var(--tercercolor);
+}
+
+.custom-scrollbar:hover::-webkit-scrollbar-thumb {
+  background-color: #aaa;
+}
 
 
 
@@ -661,5 +763,39 @@ li{
     padding: 10px 20px;
     width: calc(90% - 10px);
     max-width: 200px;
+  }
+
+  .modal-contenido {
+    max-width: 80%;
+    width: 80%;
+  }
+  
+  .movie-info {
+    flex-direction: column;
+  }
+  
+  .movie-poster img {
+    width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+  }
+  
+  .movie-details {
+    margin-left: 0;
+  }
+}
+
+@media (max-width: 600px) {
+  .modal-contenido {
+    max-width: 90%;
+    width: 90%;
+  }
+  
+  .movie-details h2 {
+    font-size: 20px;
+  }
+  
+  .movie-details p {
+    font-size: 14px;
   }
 }

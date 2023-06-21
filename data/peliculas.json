@@ -1,0 +1,86 @@
+[
+    {
+      "id": 1,
+      "titulo": "Iron Man 3",
+      "descripcion": "Cuando el mundo de Tony Stark es destrozado por un temible terrorista llamado el Mandarín, comienza una odisea de reconstrucción y venganza.",
+      "imagen": "css/images/1.jpg",
+      "generos": ["Acción", "Aventura", "Ciencia Ficción"]
+    },
+    {
+        "id": 2,
+        "titulo": "Thor: Love and Thunder",
+        "descripcion": "Secuela de Thor en el Universo Cinematográfico de Marvel.",
+        "imagen": "css/images/2.jpg",
+        "generos": ["Acción", "Aventura", "Fantasía"]
+      },
+      {
+        "id": 3,
+        "titulo": "Thor: Ragnarok",
+        "descripcion": "Película de Thor en el Universo Cinematográfico de Marvel.",
+        "imagen": "css/images/3.jpg",
+        "generos": ["Acción", "Aventura", "Fantasía"]
+      },
+      {
+        "id": 4,
+        "titulo": "Resident Evil (2022)",
+        "descripcion": "Nueva película de la franquicia Resident Evil basada en los videojuegos.",
+        "imagen": "css/images/4.jpg",
+        "generos": ["Acción", "Horror", "Ciencia ficción"]
+      },
+      {
+        "id": 5,
+        "titulo": "La Vieja Guardia",
+        "descripcion": "Película de acción y fantasía sobre un grupo de mercenarios inmortales.",
+        "imagen": "css/images/5.jpg",
+        "generos": ["Acción", "Aventura", "Fantasía"]
+      },
+      {
+        "id": 6,
+        "titulo": "Spectral",
+        "descripcion": "Película de ciencia ficción y acción sobre fuerzas sobrenaturales.",
+        "imagen": "css/images/6.jpg",
+        "generos": ["Acción", "Ciencia ficción", "Thriller"]
+      },
+      {
+        "id": 7,
+        "titulo": "Abrazar la gloria",
+        "descripcion": "Película dramática que muestra la vida de un soldado en la Segunda Guerra Mundial.",
+        "imagen": "css/images/7.jpg",
+        "generos": ["Drama", "Guerra"]
+      },
+      {
+        "id": 8,
+        "titulo": "Project Power",
+        "descripcion": "Película de superhéroes con un enfoque en el consumo de drogas y habilidades especiales.",
+        "imagen": "css/images/8.jpg",
+        "generos": ["Acción", "Ciencia ficción", "Thriller"]
+      },
+      {
+        "id": 9,
+        "titulo": "Venom (2018)",
+        "descripcion": "Película basada en el personaje de Marvel Comics Venom.",
+        "imagen": "css/images/9.jpg",
+        "generos": ["Acción", "Ciencia ficción", "Thriller"]
+      },
+      {
+        "id": 10,
+        "titulo": "Venom: Let There Be Carnage (2021)",
+        "descripcion": "Secuela de Venom con la introducción del villano Carnage.",
+        "imagen": "css/images/10.jpg",
+        "generos": ["Acción", "Ciencia ficción", "Thriller"]
+      },
+      {
+        "id": 11,
+        "titulo": "Spider-Man: No Way Home",
+        "descripcion": "Próxima película de Spider-Man en el Universo Cinematográfico de Marvel.",
+        "imagen": "css/images/11.jpg",
+        "generos": ["Acción", "Aventura", "Ciencia ficción"]
+      },
+      {
+        "id": 12,
+        "titulo": "Avengers: Infinity War",
+        "descripcion": "Película épica que reúne a los superhéroes de Marvel en una batalla contra Thanos.",
+        "imagen": "css/images/12.jpg",
+        "generos": ["Acción", "Aventura", "Ciencia ficción"]
+      }
+]
