@@ -4,14 +4,13 @@ const listaPeliculas = document.getElementById('listaPeliculas');
 buscador.addEventListener('input', function() {
   const userInput = buscador.value.toLowerCase();
 
-  // Realiza la solicitud a la API de TMDB
   const apiKey = 'a5f2223ec21c72f1df43c68198cf538c'; 
   const apiUrl = `https://api.themoviedb.org/3/search/movie?api_key=${apiKey}&query=${userInput}`;
 
   fetch(apiUrl)
     .then(response => response.json())
     .then(data => {
-      const peliculas = data.results; // Los resultados se encuentran en la propiedad 'results' del objeto de respuesta
+      const peliculas = data.results; 
 
       function mostrarPeliculas(peliculasFiltradas) {
         listaPeliculas.innerHTML = '';
