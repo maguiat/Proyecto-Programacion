@@ -1,4 +1,4 @@
-function createCarrusel(apiUrl, containerId) {
+function creaCarrusel(apiUrl, containerId) {
   fetch(apiUrl)
     .then(response => response.json())
     .then(response => {
@@ -58,7 +58,7 @@ function showMovieDetails(movie) {
   const modalAnio = document.getElementById('modal-anio');
 
   modalImagen.src = `https://image.tmdb.org/t/p/w500${movie.poster_path}`;
-  modalTitulo.textContent = movie.title || movie.name;
+  modalTitulo.textContent = movie.title;
   modalDescripcion.textContent = movie.overview;
   modalPuntuacion.textContent = `Puntuación TMDB: ${movie.vote_average.toFixed(1)}`;
   modalTituloOriginal.textContent = `Título original: ${movie.original_title}`;
@@ -78,6 +78,6 @@ function showMovieDetails(movie) {
   });
 }
 
-createCarrusel('https://api.themoviedb.org/3/trending/movie/day?language=es-ES&api_key=a5f2223ec21c72f1df43c68198cf538c', 'carrusel1');
-createCarrusel('https://api.themoviedb.org/3/movie/top_rated?language=es-ES&page=1&api_key=a5f2223ec21c72f1df43c68198cf538c', 'carrusel3');
-// Agrega más llamadas a la función para crear más carruseles
+creaCarrusel('https://api.themoviedb.org/3/trending/movie/day?language=es-ES&api_key=a5f2223ec21c72f1df43c68198cf538c', 'carrusel1');
+creaCarrusel('https://api.themoviedb.org/3/movie/now_playing?language=es-ES&page=1&api_key=a5f2223ec21c72f1df43c68198cf538c', 'carrusel2');
+creaCarrusel('https://api.themoviedb.org/3/movie/top_rated?language=es-ES&page=1&api_key=a5f2223ec21c72f1df43c68198cf538c', 'carrusel3');
