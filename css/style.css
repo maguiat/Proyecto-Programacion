@@ -637,7 +637,7 @@ body.modal-open {
 .modal {
   display: none;
   position: fixed;
-  z-index: 1000;
+  z-index: 9999;
   left: 0;
   top: 100%;
   width: 100%;
@@ -655,8 +655,6 @@ body.modal-open {
     top: 0;
   }
 }
-
-
 
 
 @keyframes slide {
