@@ -1,86 +1,83 @@
-function setupModal() {
-    const modal = document.getElementById("modal");
-    const cerrarModal = document.querySelector(".modal-cerrar");
+function createCarrusel(apiUrl, containerId) {
+  fetch(apiUrl)
+    .then(response => response.json())
+    .then(response => {
+      const carruselContainer = document.getElementById(containerId);
+      response.results.forEach(movie => {
+        const portadaDiv = document.createElement('div');
+        portadaDiv.classList.add('portada');
 
-    cerrarModal.addEventListener("click", function () {
-      modal.style.display = "none";
-    });
+        const portadaImg = document.createElement('img');
+        portadaImg.src = `https://image.tmdb.org/t/p/w500${movie.poster_path}`;
+        portadaImg.alt = movie.title;
 
-    window.addEventListener("click", function (event) {
-      if (event.target == modal) {
-        modal.style.display = "none";
-      }
-    });
-  }
+        const overlayDiv = document.createElement('div');
+        overlayDiv.classList.add('overlay');
 
-document.addEventListener("DOMContentLoaded", function () {
-    fetch("data/peliculas.json")
-        .then((response) => response.json())
-        .then((data) => {
-        const carruselContainer1 = document.getElementById("carrusel1");
-        const carruselContainer2 = document.getElementById("carrusel2");
-        const carruselContainer3 = document.getElementById("carrusel3");
+        const titleDiv = document.createElement('div');
+        titleDiv.classList.add('title');
+        titleDiv.textContent = movie.title;
 
-        const peliculasCarrusel1 = data.slice(0, 12);
-        const peliculasCarrusel2 = data.slice(0, 12);
-        const peliculasCarrusel3 = data.slice(0, 12);
+        const ratingDiv = document.createElement('div');
+        ratingDiv.classList.add('rating');
+        ratingDiv.textContent = movie.vote_average.toFixed(1); // tofixed acorta a un decimal despues de la coma 
+        ratingDiv.style.color = getColor(movie.vote_average); // le vamos a poner color según el rating
 
-        function abrirModal(pelicula) {
-            const modal = document.getElementById("modal");
-            const modalImagen = document.getElementById("modal-imagen");
-            const modalTitulo = document.getElementById("modal-titulo");
-            const modalDescripcion = document.getElementById("modal-descripcion");
+        overlayDiv.appendChild(titleDiv);
+        overlayDiv.appendChild(ratingDiv);
+        portadaDiv.appendChild(portadaImg);
+        portadaDiv.appendChild(overlayDiv);
+        carruselContainer.appendChild(portadaDiv);
 
-            modalImagen.src = pelicula.imagen;
-            modalImagen.alt = pelicula.titulo;
-            modalTitulo.textContent = pelicula.titulo;
-            modalDescripcion.textContent = pelicula.descripcion;
-
-            modal.style.display = "block";
-        }
-
-        function generarContenidoCarrusel(carruselContainer, peliculas) {
-        peliculas.forEach((pelicula) => {
-            const imagenElement = document.createElement("img");
-            imagenElement.src = pelicula.imagen;
-            imagenElement.alt = pelicula.titulo;
-
-            const overlayElement = document.createElement("div");
-            overlayElement.className = "overlay";
-
-            const textoElement = document.createElement("div");
-            textoElement.className = "texto";
-
-            const tituloElement = document.createElement("h5");
-            tituloElement.textContent = pelicula.titulo;
-
-            textoElement.appendChild(tituloElement);
-            overlayElement.appendChild(textoElement);
-
-            const imagenCompletaElement = document.createElement("div");
-            imagenCompletaElement.className = "imagen";
-            imagenCompletaElement.appendChild(imagenElement);
-            imagenCompletaElement.appendChild(overlayElement);
-
-            carruselContainer.appendChild(imagenCompletaElement);
-
-            imagenCompletaElement.addEventListener("click", () => {
-                abrirModal(pelicula);
-            });
+        portadaDiv.addEventListener('click', () => {
+          showMovieDetails(movie);
         });
-        }
-
-        generarContenidoCarrusel(carruselContainer1, peliculasCarrusel1);
-        generarContenidoCarrusel(carruselContainer2, peliculasCarrusel2);
-        generarContenidoCarrusel(carruselContainer3, peliculasCarrusel3);
-
-        setupModal();
-
-        const carruselContainers = document.querySelectorAll(".carrusel");
-
+      });
     })
-        .catch((error) => {
-            console.error("Error al cargar los datos de las películas:", error);
-        });
-    });
+    .catch(err => console.error(err));
+}
 
+function getColor(vote) {
+  if (vote >= 8) {
+    return 'green';
+  } else if (vote >= 5) {
+    return 'orange';
+  } else {
+    return 'red';
+  }
+}
+
+
+function showMovieDetails(movie) {
+  const modal = document.getElementById('modal');
+  const modalImagen = document.getElementById('modal-imagen');
+  const modalTitulo = document.getElementById('modal-titulo');
+  const modalDescripcion = document.getElementById('modal-descripcion');
+  const modalPuntuacion = document.getElementById('modal-puntuacion');
+  const modalTituloOriginal = document.getElementById('modal-titulo-original');
+  const modalAnio = document.getElementById('modal-anio');
+
+  modalImagen.src = `https://image.tmdb.org/t/p/w500${movie.poster_path}`;
+  modalTitulo.textContent = movie.title || movie.name;
+  modalDescripcion.textContent = movie.overview;
+  modalPuntuacion.textContent = `Puntuación TMDB: ${movie.vote_average.toFixed(1)}`;
+  modalTituloOriginal.textContent = `Título original: ${movie.original_title}`;
+  modalAnio.textContent = `Año: ${movie.release_date.split('-')[0]}`;
+
+  modal.style.display = 'block';
+
+  const modalCerrar = document.getElementsByClassName('modal-cerrar')[0];
+  modalCerrar.addEventListener('click', () => {
+    modal.style.display = 'none';
+  });
+
+  window.addEventListener('click', event => {
+    if (event.target === modal) {
+      modal.style.display = 'none';
+    }
+  });
+}
+
+createCarrusel('https://api.themoviedb.org/3/trending/movie/day?language=es-ES&api_key=a5f2223ec21c72f1df43c68198cf538c', 'carrusel1');
+createCarrusel('https://api.themoviedb.org/3/movie/top_rated?language=es-ES&page=1&api_key=a5f2223ec21c72f1df43c68198cf538c', 'carrusel3');
+// Agrega más llamadas a la función para crear más carruseles

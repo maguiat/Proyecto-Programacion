@@ -33,37 +33,4 @@ flechaIzquierda.addEventListener('click', () => {
     }
 });
 
-// Paginacion
-    const numeroPaginas = Math.ceil(peliculas.length / 5);
-    const indicadores = carrusel.querySelector('.indicadores');
-    for (let i = 0; i < numeroPaginas; i++) {
-    const indicador = document.createElement('button');
-
-    if (i === 0) {
-        indicador.classList.add('activo');
-    }
-
-    indicadores.appendChild(indicador);
-    indicador.addEventListener('click', (e) => {
-      fila.scrollLeft = i * fila.offsetWidth;
-
-        carrusel.querySelector('.indicadores .activo').classList.remove('activo');
-        e.target.classList.add('activo');
-    });
-}
-
-//Hover
-peliculas.forEach((pelicula) => {
-    pelicula.addEventListener('mouseenter', (e) => {
-        const elemento = e.currentTarget;
-        setTimeout(() => {
-            peliculas.forEach((pelicula) => pelicula.classList.remove('hover'));
-            elemento.classList.add('hover');
-    }, 300);
-    });
-});
-
-carrusel.addEventListener('mouseleave', () => {
-    peliculas.forEach((pelicula) => pelicula.classList.remove('hover'));
-});
 });
